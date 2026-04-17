@@ -208,7 +208,7 @@ function relativeTime(ts: number): string {
             AI
           </div>
           <div>
-            <h1 class="text-base font-semibold text-ghl-text-primary">Sales Copilot</h1>
+            <h1 class="text-base font-semibold text-ghl-text-primary">HighLevel Copilot</h1>
             <p class="text-xs text-ghl-text-muted hidden sm:block">AI-powered lead management</p>
           </div>
         </div>
@@ -245,7 +245,7 @@ function relativeTime(ts: number): string {
           <div class="w-16 h-16 rounded-2xl bg-ghl-accent/20 flex items-center justify-center mb-5">
             <span class="text-3xl">🤖</span>
           </div>
-          <h2 class="text-xl font-semibold text-ghl-text-primary mb-2">Welcome to Sales Copilot</h2>
+          <h2 class="text-xl font-semibold text-ghl-text-primary mb-2">Welcome to HighLevel Copilot</h2>
           <p class="text-sm text-ghl-text-secondary mb-8">
             I can help you manage leads, analyze your pipeline, and take actions — all through conversation.
           </p>

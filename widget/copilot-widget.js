@@ -1,5 +1,5 @@
 /**
- * Sales Copilot Widget — Embeddable JS for HighLevel Custom Code
+ * HighLevel Copilot Widget — Embeddable JS for HighLevel Custom Code
  * 
  * Usage in HighLevel:
  *   Settings → Custom Code → Body:
@@ -16,12 +16,12 @@
   try {
     const parsed = new URL(rawUrl, window.location.origin);
     if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') {
-      console.error('[Sales Copilot] Blocked unsafe URL scheme:', parsed.protocol);
+      console.error('[HighLevel Copilot] Blocked unsafe URL scheme:', parsed.protocol);
       return;
     }
     COPILOT_URL = parsed.origin;
   } catch {
-    console.error('[Sales Copilot] Invalid data-copilot-url:', rawUrl);
+    console.error('[HighLevel Copilot] Invalid data-copilot-url:', rawUrl);
     return;
   }
 
@@ -87,7 +87,7 @@
   const fab = document.createElement('button');
   fab.id = 'sales-copilot-fab';
   fab.innerHTML = '🤖';
-  fab.title = 'Open Sales Copilot';
+  fab.title = 'Open HighLevel Copilot';
   document.body.appendChild(fab);
 
   // ── Iframe Container ──

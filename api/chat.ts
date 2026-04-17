@@ -2,6 +2,7 @@ import { streamText, convertToModelMessages, stepCountIs, type UIMessage } from 
 import { openai } from '@ai-sdk/openai';
 import { SYSTEM_PROMPT } from '../server/agent/prompts.js';
 import { createTools } from '../server/agent/tools.js';
+import { handleDemoRequest } from '../server/demo/demoHandler.js';
 
 export const config = {
   runtime: 'edge',
@@ -26,13 +27,12 @@ export default async function handler(req: Request) {
   }
 
   try {
-    // Validate OpenAI API key is configured
+    // Check if OpenAI key is available — if not, use demo mode
     const apiKey = process.env.OPENAI_API_KEY;
-    if (!apiKey || apiKey.startsWith('sk-your')) {
-      return new Response(
-        JSON.stringify({ error: 'OpenAI API key not configured. Set OPENAI_API_KEY in your .env file.' }),
-        { status: 500, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } },
-      );
+    const useDemo = !apiKey || apiKey.startsWith('sk-your') || apiKey === '';
+
+    if (useDemo) {
+      return handleDemoRequest(req);
     }
 
     const body = (await req.json()) as { messages?: UIMessage[] };
