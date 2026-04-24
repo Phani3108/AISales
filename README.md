@@ -1,6 +1,6 @@
-# 🤖 HighLevel Copilot
+# 🤖 AI Sales Copilot
 
-> A ChatGPT-style AI assistant embedded inside [HighLevel CRM](https://www.gohighlevel.com/) for conversational lead management, pipeline actions, and sales intelligence.
+> A ChatGPT-style AI assistant embedded inside for conversational lead management, pipeline actions, and sales intelligence.
 
 **Built by [Phani Marupaka](https://linkedin.com/in/phani-marupaka)**
 
